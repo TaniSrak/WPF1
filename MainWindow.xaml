@@ -1,0 +1,75 @@
+﻿<Window x:Class="WPF1.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WPF1"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="450" Width="800">
+    <Grid>
+
+    <Grid.ColumnDefinitions>
+        <ColumnDefinition Width="0.5"></ColumnDefinition>
+        <ColumnDefinition Width="1.5"></ColumnDefinition>
+
+    </Grid.ColumnDefinitions>
+        
+    <Grid.RowDefinitions>
+        <RowDefinition Height="1.5*"></RowDefinition>
+        <RowDefinition Height="1.5*"></RowDefinition>
+
+    </Grid.RowDefinitions>
+        
+        <TextBlock TextWrapping="Wrap">
+    <Run FontSize="20" Foreground="Red" FontWeight="Bold">K</Run>
+    Катя: Котики очень милые.
+    <LineBreak />
+    Коля: Я не люблю котиков
+        </TextBlock>
+        
+        <TextBox MinLines="3">Коля: Собачки очень милые.</TextBox>
+        <TextBox MaxLines="1">Оля: Собачки не очень милые.</TextBox>
+        <TextBox AcceptsReturn="True" AcceptsTab="True" MaxLines="10" VerticalScrollBarVisibility="Visible"></TextBox>
+
+        <PasswordBox PasswordChar="*" MinHeight="30" />
+        <PasswordBox MinHeight="30" />
+        <ProgressBar Height="30" Maximum="100" Minimum="0" Value="50"></ProgressBar>
+        <Calendar DisplayDateStart="12.04.2023"
+                  DisplayDateEnd="12.28.2023">
+                  </Calendar>
+        <Calendar DisplayMode="Year"></Calendar>
+        <DatePicker Name="datePicker1" IsDropDownOpen="True" SelectedDateFormat="Short" Height="30"></DatePicker>
+
+
+            <Expander Grid.Column="0" Grid.RowSpan="3">
+            
+        </Expander>
+
+        <ScrollViewer>
+            <StackPanel>
+                <Button MinHeight="60" Background="Red"></Button>
+                <Button MinHeight="60" Background="Orange"></Button>
+            </StackPanel>
+        </ScrollViewer>
+
+        <Image Source="Image/кукусик.jpg"></Image>
+
+        <TabControl>
+            <TabItem Header="Вкладка 1">ПЕрвая вкладка</TabItem>
+            <TabItem Header="Вкладка 2">
+                <StackPanel>
+                    <TextBlock>В каждую из панелей можно поместить свою компановку</TextBlock>
+                    <TextBlock>И любые другие элементы</TextBlock>
+                </StackPanel>
+            </TabItem>
+        </TabControl>
+
+        <ToolBarTray DockPanel.Dock="Top">
+            <ToolBar>
+                <Button Content="New"/>
+                <Button Content="Open"/>
+            </ToolBar>
+        </ToolBarTray>
+
+    </Grid>
+</Window>
